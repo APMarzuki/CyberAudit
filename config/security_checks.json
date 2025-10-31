@@ -1,0 +1,55 @@
+{
+  "security_checks": {
+    "firewall": {
+      "enabled": true,
+      "risk_weights": {
+        "domain_profile_off": 3,
+        "private_profile_off": 3,
+        "public_profile_off": 3,
+        "cannot_check": 8
+      }
+    },
+    "user_audit": {
+      "enabled": true,
+      "risk_weights": {
+        "admin_enabled": 2,
+        "blank_passwords": 8,
+        "guest_enabled": 2,
+        "cannot_enumerate": 5
+      }
+    },
+    "av_edr": {
+      "enabled": true,
+      "risk_weights": {
+        "no_av_detected": 8,
+        "definitions_old": 4,
+        "service_stopped": 6
+      }
+    },
+    "updates": {
+      "enabled": true,
+      "risk_weights": {
+        "service_stopped": 3,
+        "no_recent_updates": 5,
+        "critical_updates_missing": 7
+      }
+    },
+    "startup": {
+      "enabled": true,
+      "risk_weights": {
+        "suspicious_item": 2,
+        "many_startup_items": 1,
+        "temp_location": 3
+      }
+    }
+  },
+  "reporting": {
+    "default_output_dir": "outputs",
+    "generate_json": true,
+    "generate_html": true,
+    "risk_thresholds": {
+      "low": 3,
+      "medium": 7
+    }
+  }
+}
