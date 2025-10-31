@@ -1,21 +1,20 @@
 from src.audit_modules import firewall_check, user_audit, av_edr_check, update_check, startup_analysis, network_security
-from src.audit_modules import browser_security  # ADD THIS LINE
+from src.audit_modules import browser_security
+from src.audit_modules import password_policy  # ADD THIS LINE
 
 class SystemScanner:
-    """
-    Main system scanner that coordinates all security checks
-    """
-
     def __init__(self):
         self.checks = [
             ("Firewall", firewall_check.check_firewall_status),
             ("Network Security", network_security.check_network_security),
-            ("Browser Security", browser_security.check_browser_security),  # NEW
+            ("Browser Security", browser_security.check_browser_security),
+            ("Password Policy", password_policy.check_password_policy),  # NEW
             ("Users & Groups", user_audit.audit_users_and_groups),
             ("Antivirus", av_edr_check.check_av_edr_status),
             ("Updates", update_check.check_system_updates),
             ("Startup", startup_analysis.analyze_startup_items)
         ]
+    # ... rest of the class remains the same
 
     def run_full_scan(self):
         """

@@ -1,5 +1,5 @@
-VERSION = "1.2.0"
-RELEASE_DATE = "2025-10-31"
+VERSION = "1.3.0"
+BUILD_DATE = "2025-10-31"
 RELEASE_NOTES = """
 v1.2.0 Release Notes:
 ✅ NEW: Browser Security Module

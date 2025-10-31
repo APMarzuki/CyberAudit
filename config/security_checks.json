@@ -9,6 +9,37 @@
         "cannot_check": 8
       }
     },
+    "network_security": {
+      "enabled": true,
+      "risk_weights": {
+        "sharing_enabled": 4,
+        "rdp_enabled": 5,
+        "suspicious_ports": 7,
+        "weak_tls": 6,
+        "cannot_check": 5
+      }
+    },
+    "browser_security": {
+      "enabled": true,
+      "risk_weights": {
+        "outdated_browser": 6,
+        "no_smart_screen": 4,
+        "weak_security_settings": 5,
+        "suspicious_extensions": 7,
+        "cannot_check": 3
+      }
+    },
+    "password_policy": {
+      "enabled": true,
+      "risk_weights": {
+        "short_password_length": 7,
+        "no_expiration": 6,
+        "no_lockout_policy": 8,
+        "weak_history": 4,
+        "auto_unlock": 6,
+        "cannot_check": 8
+      }
+    },
     "user_audit": {
       "enabled": true,
       "risk_weights": {
