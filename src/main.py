@@ -53,6 +53,11 @@ def main():
 
         print("\n✅ CyberAudit scan completed successfully!")
 
+        # Keep console open for .exe
+        if getattr(sys, 'frozen', False):
+            print("\nPress Enter to exit...")
+            input()
+
     except KeyboardInterrupt:
         print("\n\n❌ Scan interrupted by user.")
         sys.exit(1)

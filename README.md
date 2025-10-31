@@ -5,6 +5,7 @@ A professional security auditing tool for Windows endpoints that performs compre
 ## ✨ Features
 
 - **Firewall Status Check** - Verifies Windows Firewall configuration
+- **🌐 Network Security Check** - Scans open ports, network shares, and remote desktop status
 - **Antivirus/EDR Detection** - Identifies running security software  
 - **User & Group Audit** - Analyzes local user accounts and privileges
 - **System Updates Check** - Reports on Windows Update status and patch level

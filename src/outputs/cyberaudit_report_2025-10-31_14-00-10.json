@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "tool": "CyberAudit",
+    "version": "1.0",
+    "scan_timestamp": "2025-10-31_14-00-10",
+    "overall_risk_level": "LOW"
+  },
+  "results": {
+    "scan_timestamp": "",
+    "overall_risk_score": 2.3333333333333335,
+    "checks": [
+      {
+        "check_name": "Firewall Status",
+        "domain_profile": "Unknown",
+        "private_profile": "Unknown",
+        "public_profile": "Unknown",
+        "risk_score": 0,
+        "details": []
+      },
+      {
+        "check_name": "Network Security",
+        "risk_score": 5,
+        "details": [
+          "Error during check: 'NoneType' object has no attribute 'split'"
+        ]
+      },
+      {
+        "check_name": "User and Group Audit",
+        "risk_score": 0,
+        "admin_users": [],
+        "inactive_users": [],
+        "details": [
+          "📊 Found 6 local user accounts"
+        ]
+      },
+      {
+        "check_name": "Antivirus/EDR Status",
+        "risk_score": 0,
+        "av_installed": true,
+        "av_running": true,
+        "av_products": [
+          "Windows Defender"
+        ],
+        "details": [
+          "✅ AV/EDR running: Windows Defender"
+        ]
+      },
+      {
+        "check_name": "System Updates",
+        "risk_score": 3,
+        "last_update": "Unknown",
+        "update_status": "Service Not Running",
+        "details": [
+          "🖥️  System Boot Time: 10/29/2025, 9:21:09 AM",
+          "⚠️  Windows Update service is not running",
+          "📅 Last 4 updates installed"
+        ]
+      },
+      {
+        "check_name": "Startup Programs",
+        "risk_score": 6,
+        "startup_count": 372,
+        "suspicious_items": [
+          {
+            "name": "WsNativePushService.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Wondershare\\Wondershare NativePush\\WsNativePushService.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "Code.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "copilot-language-server.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Roaming\\JetBrains\\PyCharmCE2025.2\\plugins\\github-copilot-intellij\\copilot-agent\\native\\win32-x64\\copilot-language-server.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "WsToastNotification.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Wondershare\\Wondershare NativePush\\WsToastNotification.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "Grammarly.Desktop.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Grammarly\\DesktopIntegrations\\Grammarly.Desktop.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "UnInstDaemon.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\bwp0befc04a-3ffa-4345-ab70-a4cb5c4c5600\\UnInstDaemon.exe",
+            "reason": "Executable in temporary folder",
+            "risk_weight": 3,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.AdvancedPaste.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\WinUI3Apps\\PowerToys.AdvancedPaste.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.AlwaysOnTop.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.AlwaysOnTop.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.Awake.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.Awake.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.ColorPickerUI.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.ColorPickerUI.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.CropAndLock.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.CropAndLock.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.FancyZones.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.FancyZones.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.Peek.UI.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\WinUI3Apps\\PowerToys.Peek.UI.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.PowerLauncher.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.PowerLauncher.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "BingWallpaperDaemon",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\bwp0befc04a-3ffa-4345-ab70-a4cb5c4c5600\\UnInstDaemon.exe",
+            "reason": "Executable in temporary folder (Startup)",
+            "risk_weight": 3,
+            "type": "Startup Entry"
+          },
+          {
+            "name": "Grammarly",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Grammarly\\DesktopIntegrations\\Grammarly.Desktop.exe",
+            "reason": "Executable in AppData folder (Startup)",
+            "risk_weight": 2,
+            "type": "Startup Entry"
+          }
+        ],
+        "details": [
+          "🔄 372 running processes",
+          "📝 User Startup: 6 entries",
+          "📝 System Startup: 4 entries",
+          "⚠️  Very high number of running processes",
+          "✅ Normal number of startup entries",
+          "📈 Risk: 6/10 (Processes: 2, High-risk: 2, Medium-risk: 0)",
+          "🚨 Found 17 potentially suspicious items:",
+          "   🟡 WsNativePushService.exe - Executable in AppData folder",
+          "   🟡 Code.exe - Executable in AppData folder",
+          "   🟡 copilot-language-server.exe - Executable in AppData folder",
+          "   🟡 WsToastNotification.exe - Executable in AppData folder",
+          "   🟡 Grammarly.Desktop.exe - Executable in AppData folder",
+          "   🔴 UnInstDaemon.exe - Executable in temporary folder",
+          "   ... and 11 more suspicious items",
+          "🔴 2 items running from temporary locations",
+          "🟡 15 items running from AppData folders"
+        ]
+      }
+    ],
+    "summary": {
+      "total_checks": 6,
+      "high_risk_checks": 0,
+      "medium_risk_checks": 2,
+      "low_risk_checks": 4
+    }
+  }
+}

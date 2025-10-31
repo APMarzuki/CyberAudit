@@ -7,7 +7,8 @@ def run_command(command):
     Execute a Windows command and return the output
     """
     try:
-        result = subprocess.run(command, shell=True, capture_output=True, text=True, timeout=30)
+        result = subprocess.run(command, shell=True, capture_output=True, text=True,
+                              encoding='utf-8', errors='ignore', timeout=30)
         return result.stdout, result.stderr, result.returncode
     except subprocess.TimeoutExpired:
         return "", "Command timed out", -1
