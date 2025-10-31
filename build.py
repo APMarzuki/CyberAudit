@@ -4,15 +4,17 @@ import sys
 
 
 def build_executable():
-    print("🔨 Building CyberAudit Executable...")
+    print("🔨 Building CyberAudit v1.2 Executable...")
     print("📦 Features included:")
     print("   • Firewall Status Check")
     print("   • Network Security Check")
+    print("   • Browser Security Check")  # ADD THIS LINE
     print("   • User & Group Audit")
     print("   • Antivirus/EDR Detection")
     print("   • System Updates Check")
     print("   • Startup Programs Analysis")
     print()
+    # ... rest of your build code
 
     try:
         # Run PyInstaller to create single executable

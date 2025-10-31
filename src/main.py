@@ -6,13 +6,13 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.core.system_scanner import SystemScanner
 from src.core.report_generator import ReportGenerator
-
+from src.core.version import VERSION
 
 def main():
     """
     Main entry point for CyberAudit
     """
-    print("🛡️  Welcome to CyberAudit - Endpoint Security Health Checker")
+    print("🛡️  Welcome to CyberAudit v1.2.0 - Endpoint Security Health Checker")
     print("=" * 55)
 
     try:
