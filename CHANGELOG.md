@@ -1,20 +1,17 @@
-# Changelog
+## [1.5.0] - 2025-11-02
+### Added
+- Logging & Monitoring security audit module
+- Encryption Status checking module  
+- USB Device Control audit module
+- 11 total security modules now available
 
-## v1.2.0 (2025-10-31)
-### New Features
-- Added Browser Security module
-- Enhanced HTML reporting
-- Improved risk scoring
+### Enhanced
+- Professional GUI interface with real-time progress
+- Color-coded risk assessment system
+- Improved error handling and stability
 
-### Technical Improvements
-- Better error handling
-- Code optimization
-- Updated documentation
-
-## v1.1.0
-- Initial network security features
-- Multi-format reporting
-- Professional risk scoring
-
-## v1.0.0
-- Initial release with core security modules
+## [1.4.0] - 2025-11-01
+### Added
+- Professional GUI interface
+- Real-time scanning progress
+- Color-coded results display

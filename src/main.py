@@ -12,7 +12,7 @@ def main():
     """
     Main entry point for CyberAudit
     """
-    print("🛡️  Welcome to CyberAudit v1.3.0 - Endpoint Security Health Checker")
+    print("🛡️  Welcome to CyberAudit v1.5.0 - Endpoint Security Health Checker")
     print("=" * 55)
 
     try:

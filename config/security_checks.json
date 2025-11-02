@@ -40,6 +40,33 @@
         "cannot_check": 8
       }
     },
+    "logging_audit": {
+      "enabled": true,
+      "risk_weights": {
+        "audit_disabled": 6,
+        "log_size_small": 4,
+        "retention_disabled": 5,
+        "cannot_check": 5
+      }
+    },
+    "encryption_check": {
+      "enabled": true,
+      "risk_weights": {
+        "not_encrypted": 8,
+        "partial_encryption": 6,
+        "status_unknown": 5,
+        "cannot_check": 6
+      }
+    },
+    "usb_audit": {
+  "enabled": true,
+  "risk_weights": {
+    "usb_enabled": 4,
+    "no_restrictions": 4,
+    "cannot_determine": 4,
+    "usb_disabled": 1
+     }
+   },
     "user_audit": {
       "enabled": true,
       "risk_weights": {

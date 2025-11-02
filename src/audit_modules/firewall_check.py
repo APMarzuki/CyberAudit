@@ -14,37 +14,57 @@ def check_firewall_status():
 
     results = {
         "check_name": "Firewall Status",
-        "domain_profile": "Unknown",
-        "private_profile": "Unknown",
-        "public_profile": "Unknown",
         "risk_score": 0,
-        "details": []
+        "details": [],
+        "recommendations": [
+            "Ensure Windows Firewall is enabled for all network profiles",
+            "Configure firewall rules to block unnecessary inbound connections"
+        ]
     }
 
-    if returncode == 0:
-        # Parse the output
-        profiles = ["Domain Profile", "Private Profile", "Public Profile"]
+    if returncode == 0 and stdout:
+        # Parse the output safely
+        profiles = {
+            "Domain Profile": "Unknown",
+            "Private Profile": "Unknown",
+            "Public Profile": "Unknown"
+        }
+
         current_profile = None
 
         for line in stdout.split('\n'):
             line = line.strip()
-            if "Profile Settings:" in line:
-                current_profile = line.split(":")[0].strip()
-            elif "State" in line and current_profile:
-                state = line.split(":")[1].strip() if ":" in line else "Unknown"
-                profile_key = current_profile.lower().replace(" ", "_") + "_profile"
-                if profile_key in results:
-                    results[profile_key] = state
 
-                    # Calculate risk - firewall off is high risk
-                    if state == "OFF":
-                        results["risk_score"] += 3
-                        results["details"].append(f"❌ {current_profile}: Firewall is OFF")
-                    else:
-                        results["details"].append(f"✅ {current_profile}: Firewall is ON")
+            # Look for profile headers
+            if "Profile Settings:" in line:
+                current_profile = line.split("Profile Settings:")[1].strip()
+            elif "State" in line and current_profile and current_profile in profiles:
+                # Extract state value safely
+                if "ON" in line.upper():
+                    profiles[current_profile] = "ON"
+                elif "OFF" in line.upper():
+                    profiles[current_profile] = "OFF"
+
+        # Evaluate results
+        risk_factors = []
+        for profile_name, state in profiles.items():
+            if state == "OFF":
+                risk_factors.append((f"❌ {profile_name}: Firewall is OFF", 3))
+                results["details"].append(f"❌ {profile_name}: Firewall is OFF")
+            elif state == "ON":
+                results["details"].append(f"✅ {profile_name}: Firewall is ON")
+            else:
+                risk_factors.append((f"⚠️ {profile_name}: Status unknown", 2))
+                results["details"].append(f"⚠️ {profile_name}: Status unknown")
+
+        # Calculate risk score
+        if risk_factors:
+            results["risk_score"] = min(10, sum(risk for _, risk in risk_factors))
+        else:
+            results["risk_score"] = 0
 
     else:
         results["risk_score"] = 8
-        results["details"].append("❌ Unable to check firewall status")
+        results["details"].append("❌ Unable to check firewall status - command failed")
 
     return results

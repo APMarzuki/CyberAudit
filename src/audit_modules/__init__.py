@@ -9,4 +9,7 @@ from . import update_check
 from . import startup_analysis
 from . import network_security
 from . import browser_security
-from . import password_policy  # ADD THIS LINE
+from . import password_policy
+from . import logging_audit
+from . import encryption_check
+from . import usb_audit  # ADD THIS LINE
