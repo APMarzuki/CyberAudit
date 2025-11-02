@@ -7,20 +7,25 @@ A professional security auditing tool for Windows endpoints that performs compre
 - **🌐 Network Security Audit** - Scans open ports, network shares, and remote desktop status  
 - **🌍 Browser Security Analysis** - Detects installed browsers, extensions, and security settings
 - **🔐 Password Policy Audit** - Checks Windows password complexity, expiration, and lockout policies
-- **📊 Logging & Monitoring Audit** - **NEW!** Verifies event logging and audit policies
-- **🔒 Encryption Status Check** - **NEW!** Checks BitLocker and device encryption status
-- **💾 USB Device Control** - **NEW!** Audits removable storage policies and restrictions
+- **📊 Logging & Monitoring Audit** - Verifies event logging and audit policies
+- **🔒 Encryption Status Check** - Checks BitLocker and device encryption status
+- **💾 USB Device Control** - Audits removable storage policies and restrictions
+- **🖥️ Application Security Audit** - **NEW v2.0!** Scans installed apps for vulnerabilities
+- **⚙️ Windows Services Audit** - **NEW v2.0!** Checks service configurations and permissions  
+- **📋 Group Policy Compliance** - **NEW v2.0!** Audits security policy settings
+- **🌐 Network Device Discovery** - **NEW v2.0!** Discovers network devices and shares
+- **🛡️ Windows Hardening Check** - **NEW v2.0!** Verifies OS security configurations
 - **👥 User & Group Audit** - Analyzes local user accounts and privileges
 - **🛡️ Antivirus/EDR Detection** - Identifies running security software
 - **🔄 System Updates Check** - Reports on Windows Update status and patch level
 - **🚀 Startup Program Analysis** - Detects suspicious auto-start applications
 
-**11 Comprehensive Security Modules Total!**
+**16 Comprehensive Security Modules Total!**
 
 ### 🚀 Quick Start
-Download `CyberAudit-v1.5.0.exe` and run it directly - no installation required!
+Download `CyberAudit.exe` (v2.0.0) and run it directly - no installation required!
 
-bash
+```bash
 # Clone the repository
 git clone https://github.com/APMarzuki/CyberAudit.git
 cd CyberAudit
@@ -28,8 +33,11 @@ cd CyberAudit
 # Install dependencies
 pip install -r requirements.txt
 
-# Run CyberAudit
-python src/main.py
+# Run CyberAudit Console
+python main.py
+
+# Run CyberAudit GUI  
+python launch_gui.py
 
 Portable Version
 Download the latest CyberAudit.exe from Releases and run it directly - no Python installation required!
@@ -67,7 +75,13 @@ Download the latest CyberAudit.exe from Releases and run it directly - no Python
 
 ## 🎯 Version History
 
-### v1.5.0 (Current) - Enhanced Security Suite
+### v2.0.0 (Current) - Enterprise Security Suite
+- ✅ **5 NEW MODULES**: Application Security, Windows Services, Group Policy, Network Discovery, Windows Hardening
+- ✅ **16 comprehensive security modules** total
+- ✅ Enhanced GUI with real-time progress tracking
+- ✅ Improved import system and compatibility
+
+### v1.5.0 - Enhanced Security Suite
 - ✅ **3 NEW MODULES**: Logging & Monitoring, Encryption Status, USB Device Control
 - ✅ **11 comprehensive security modules** total
 - ✅ Professional GUI interface with real-time results
@@ -118,9 +132,14 @@ CyberAudit/
 │   ├── audit_modules/          # Security check modules
 │   │   ├── firewall_check.py
 │   │   ├── password_policy.py
-│   │   ├── logging_audit.py    # NEW v1.5!
-│   │   ├── encryption_check.py # NEW v1.5!
-│   │   ├── usb_audit.py        # NEW v1.5!
+│   │   ├── logging_audit.py
+│   │   ├── encryption_check.py
+│   │   ├── usb_audit.py
+│   │   ├── application_security.py    # NEW v2.0!
+│   │   ├── windows_services.py        # NEW v2.0!
+│   │   ├── group_policy.py            # NEW v2.0!
+│   │   ├── network_discovery.py       # NEW v2.0!
+│   │   ├── windows_hardening.py       # NEW v2.0!
 │   │   └── ...
 │   ├── core/                   # Core system components
 │   ├── gui/                    # NEW v1.4! GUI interface
