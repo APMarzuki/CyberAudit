@@ -41,6 +41,34 @@ python launch_gui.py
 
 Portable Version
 Download the latest CyberAudit.exe from Releases and run it directly - no Python installation required!
+## 🚀 For End Users
+**No technical knowledge required!**
+
+### Quick Start (30 seconds):
+1. **Download** `CyberAudit.exe` from [Releases](https://github.com/APMarzuki/CyberAudit/releases)
+2. **Double-click** to run (allow admin permissions when prompted)
+3. **Click** "Start Security Scan" in the GUI
+4. **View** your comprehensive security report!
+
+### What You'll Get:
+- ✅ **16 security checks** in under 2 minutes
+- ✅ **Color-coded risk assessment** (Green/Yellow/Red)
+- ✅ **Professional HTML report** saved automatically
+- ✅ **No installation** - runs directly from the .exe
+
+### Requirements:
+- **Windows 10 or 11**
+- **Administrator rights** (for full system access)
+- **Internet connection** (for some security checks)
+
+### Perfect For:
+- IT professionals doing security audits
+- System administrators checking workstations
+- Security students learning about Windows security
+- Small businesses without dedicated security tools
+- Developers wanting to check their machine's security posture
+
+**No Python knowledge required! The portable executable includes everything needed.**
 
 📋 Security Modules
 
