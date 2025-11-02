@@ -1,0 +1,172 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>CyberAudit Security Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; }
+                .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+                .risk-high { color: #e74c3c; font-weight: bold; }
+                .risk-medium { color: #f39c12; font-weight: bold; }
+                .risk-low { color: #27ae60; font-weight: bold; }
+                .check { border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 5px; }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1>🛡️ CyberAudit Security Report</h1>
+                <p>Generated: 2025-11-02_11-57-20</p>
+                <p>Overall Risk: <span class="risk-medium">
+                    MEDIUM (3.5/10)
+                </span></p>
+            </div>
+
+            <h2>Security Checks</h2>
+        
+            <div class="check">
+                <h3>Firewall Status 
+                    <span class="risk-medium">(Risk: 6/10)</span>
+                </h3>
+                <ul>
+            <li>⚠️ Domain Profile: Status unknown</li><li>⚠️ Private Profile: Status unknown</li><li>⚠️ Public Profile: Status unknown</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Network Security 
+                    <span class="risk-low">(Risk: 3/10)</span>
+                </h3>
+                <ul>
+            <li>✅ No risky open ports found on localhost</li><li>🟡 Network shares found: 4</li><li>   • C$</li><li>   • D$</li><li>   • IPC$</li><li>   ... and 1 more shares</li><li>✅ Remote Desktop is disabled</li><li>✅ Windows Firewall is active</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Browser Security 
+                    <span class="risk-low">(Risk: 0/10)</span>
+                </h3>
+                <ul>
+            <li>✅ Browsers detected: Chrome, Edge</li><li>📊 Browser extensions found: 7</li><li>✅ Modern secure browser set as default</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Password Policy 
+                    <span class="risk-medium">(Risk: 5.5/10)</span>
+                </h3>
+                <ul>
+            <li>Minimum password length too short (0 characters)</li><li>Limited password history (0 passwords remembered)</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Logging & Monitoring 
+                    <span class="risk-medium">(Risk: 5.0/10)</span>
+                </h3>
+                <ul>
+            <li>Security log retention disabled - logs may be overwritten</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Encryption Status 
+                    <span class="risk-medium">(Risk: 6.0/10)</span>
+                </h3>
+                <ul>
+            <li>Cannot determine encryption status</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>USB Device Control 
+                    <span class="risk-medium">(Risk: 4.0/10)</span>
+                </h3>
+                <ul>
+            <li>USB storage is fully enabled</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Application Security 
+                    <span class="risk-medium">(Risk: 4/10)</span>
+                </h3>
+                <ul>
+            <li>🔄 Microsoft Teams Meeting Add-in for Microsoft Office version 1.25.04401 may be outdated</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Windows Services 
+                    <span class="risk-medium">(Risk: 4.6/10)</span>
+                </h3>
+                <ul>
+            <li>⚠️ SSDPSRV service is running: UPnP Discovery Service - network exposure</li><li>⚠️ W3SVC service is running: IIS Web Server - if not needed</li><li>🔒 Spooler runs with SYSTEM privileges</li><li>🔒 Schedule runs with SYSTEM privileges</li><li>🔒 LanmanServer runs with SYSTEM privileges</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Group Policy Compliance 
+                    <span class="risk-low">(Risk: 2/10)</span>
+                </h3>
+                <ul>
+            <li>✅ Group Policy settings meet basic security requirements</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Network Device Discovery 
+                    <span class="risk-low">(Risk: 1.6666666666666667/10)</span>
+                </h3>
+                <ul>
+            <li>📡 Local IP: 192.168.0.129, Scanning subnet: 192.168.0.x</li><li>🌐 Network device found: 192.168.0.1</li><li>💼 Network shares found: C$, D$, IPC$, ADMIN$, The</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Windows Hardening 
+                    <span class="risk-medium">(Risk: 5.75/10)</span>
+                </h3>
+                <ul>
+            <li>❌ Windows Defender antivirus is disabled</li><li>⚠️ Windows Defender real-time protection is disabled</li><li>ℹ️ BitLocker not configured or not available</li><li>⚠️ UAC not configured for secure admin approval</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>User and Group Audit 
+                    <span class="risk-low">(Risk: 0/10)</span>
+                </h3>
+                <ul>
+            <li>📊 Found 6 local user accounts</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Antivirus/EDR Status 
+                    <span class="risk-low">(Risk: 0/10)</span>
+                </h3>
+                <ul>
+            <li>✅ AV/EDR running: Windows Defender</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>System Updates 
+                    <span class="risk-low">(Risk: 3/10)</span>
+                </h3>
+                <ul>
+            <li>🖥️  System Boot Time: 10/29/2025, 9:21:13 AM</li><li>⚠️  Windows Update service is not running</li><li>📅 Last 4 updates installed</li>
+                </ul>
+            </div>
+            
+            <div class="check">
+                <h3>Startup Programs 
+                    <span class="risk-medium">(Risk: 6/10)</span>
+                </h3>
+                <ul>
+            <li>🔄 365 running processes</li><li>📝 User Startup: 6 entries</li><li>📝 System Startup: 4 entries</li><li>⚠️  Very high number of running processes</li><li>✅ Normal number of startup entries</li><li>📈 Risk: 6/10 (Processes: 2, High-risk: 2, Medium-risk: 0)</li><li>🚨 Found 16 potentially suspicious items:</li><li>   🟡 WsNativePushService.exe - Executable in AppData folder</li><li>   🟡 WsToastNotification.exe - Executable in AppData folder</li><li>   🟡 Grammarly.Desktop.exe - Executable in AppData folder</li><li>   🔴 UnInstDaemon.exe - Executable in temporary folder</li><li>   🟡 PowerToys.AdvancedPaste.exe - Executable in AppData folder</li><li>   🟡 PowerToys.exe - Executable in AppData folder</li><li>   ... and 10 more suspicious items</li><li>🔴 2 items running from temporary locations</li><li>🟡 14 items running from AppData folders</li>
+                </ul>
+            </div>
+            
+        </body>
+        </html>
+        

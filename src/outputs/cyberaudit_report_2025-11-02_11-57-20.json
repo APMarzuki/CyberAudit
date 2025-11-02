@@ -1,0 +1,354 @@
+{
+  "metadata": {
+    "tool": "CyberAudit",
+    "version": "1.0",
+    "scan_timestamp": "2025-11-02_11-57-20",
+    "overall_risk_level": "MEDIUM"
+  },
+  "results": {
+    "scan_timestamp": "",
+    "overall_risk_score": 3.5322916666666666,
+    "checks": [
+      {
+        "check_name": "Firewall Status",
+        "risk_score": 6,
+        "details": [
+          "⚠️ Domain Profile: Status unknown",
+          "⚠️ Private Profile: Status unknown",
+          "⚠️ Public Profile: Status unknown"
+        ],
+        "recommendations": [
+          "Ensure Windows Firewall is enabled for all network profiles",
+          "Configure firewall rules to block unnecessary inbound connections"
+        ]
+      },
+      {
+        "check_name": "Network Security",
+        "risk_score": 3,
+        "details": [
+          "✅ No risky open ports found on localhost",
+          "🟡 Network shares found: 4",
+          "   • C$",
+          "   • D$",
+          "   • IPC$",
+          "   ... and 1 more shares",
+          "✅ Remote Desktop is disabled",
+          "✅ Windows Firewall is active"
+        ]
+      },
+      {
+        "check_name": "Browser Security",
+        "risk_score": 0,
+        "details": [
+          "✅ Browsers detected: Chrome, Edge",
+          "📊 Browser extensions found: 7",
+          "✅ Modern secure browser set as default"
+        ]
+      },
+      {
+        "check_name": "Password Policy",
+        "risk_score": 5.5,
+        "details": [
+          "Minimum password length too short (0 characters)",
+          "Limited password history (0 passwords remembered)"
+        ],
+        "recommendations": [
+          "Set minimum password length to at least 12 characters",
+          "Configure password expiration between 60-90 days",
+          "Enable account lockout after 5-10 failed attempts",
+          "Maintain password history of at least 10 passwords",
+          "Use password complexity requirements",
+          "CRITICAL: Increase minimum password length to 12+ characters immediately"
+        ]
+      },
+      {
+        "check_name": "Logging & Monitoring",
+        "risk_score": 5.0,
+        "details": [
+          "Security log retention disabled - logs may be overwritten"
+        ],
+        "recommendations": [
+          "Enable auditing for critical events (logon, object access, policy changes)",
+          "Ensure event logs are large enough to retain 30+ days of data",
+          "Regularly review security event logs",
+          "Configure log retention policies"
+        ]
+      },
+      {
+        "check_name": "Encryption Status",
+        "risk_score": 6.0,
+        "details": [
+          "Cannot determine encryption status"
+        ],
+        "recommendations": [
+          "Enable BitLocker encryption on all fixed drives",
+          "Encrypt removable drives containing sensitive data",
+          "Ensure encryption keys are properly backed up",
+          "Use TPM + PIN for enhanced security where supported"
+        ]
+      },
+      {
+        "check_name": "USB Device Control",
+        "risk_score": 4.0,
+        "details": [
+          "USB storage is fully enabled"
+        ],
+        "recommendations": [
+          "Consider implementing USB device control policies in enterprise environments",
+          "Restrict unauthorized removable storage devices",
+          "Enable device installation restrictions for untrusted devices",
+          "Use application control to block unauthorized executables from USB devices"
+        ]
+      },
+      {
+        "check_name": "Application Security",
+        "risk_score": 4,
+        "details": [
+          "🔄 Microsoft Teams Meeting Add-in for Microsoft Office version 1.25.04401 may be outdated"
+        ],
+        "recommendations": [
+          "Uninstall unnecessary applications",
+          "Keep all software updated regularly",
+          "Remove end-of-life software immediately",
+          "Use application whitelisting where possible"
+        ]
+      },
+      {
+        "check_name": "Windows Services",
+        "risk_score": 4.6,
+        "details": [
+          "⚠️ SSDPSRV service is running: UPnP Discovery Service - network exposure",
+          "⚠️ W3SVC service is running: IIS Web Server - if not needed",
+          "🔒 Spooler runs with SYSTEM privileges",
+          "🔒 Schedule runs with SYSTEM privileges",
+          "🔒 LanmanServer runs with SYSTEM privileges"
+        ],
+        "recommendations": [
+          "Disable unnecessary services",
+          "Run services with least privilege accounts",
+          "Regularly review service permissions",
+          "Monitor for suspicious service installations"
+        ]
+      },
+      {
+        "check_name": "Group Policy Compliance",
+        "risk_score": 2,
+        "details": [
+          "✅ Group Policy settings meet basic security requirements"
+        ],
+        "recommendations": [
+          "Implement password complexity requirements",
+          "Enable account lockout policies",
+          "Configure audit policies for security events",
+          "Set user rights assignment appropriately"
+        ]
+      },
+      {
+        "check_name": "Network Device Discovery",
+        "risk_score": 1.6666666666666667,
+        "details": [
+          "📡 Local IP: 192.168.0.129, Scanning subnet: 192.168.0.x",
+          "🌐 Network device found: 192.168.0.1",
+          "💼 Network shares found: C$, D$, IPC$, ADMIN$, The"
+        ],
+        "recommendations": [
+          "Implement network segmentation",
+          "Monitor for unauthorized devices",
+          "Use 802.1X for network access control",
+          "Regularly scan for rogue devices"
+        ]
+      },
+      {
+        "check_name": "Windows Hardening",
+        "risk_score": 5.75,
+        "details": [
+          "❌ Windows Defender antivirus is disabled",
+          "⚠️ Windows Defender real-time protection is disabled",
+          "ℹ️ BitLocker not configured or not available",
+          "⚠️ UAC not configured for secure admin approval"
+        ],
+        "recommendations": [
+          "Enable Windows Defender real-time protection",
+          "Configure BitLocker for all drives",
+          "Disable unnecessary Windows features",
+          "Enable Windows Security Center monitoring"
+        ]
+      },
+      {
+        "check_name": "User and Group Audit",
+        "risk_score": 0,
+        "admin_users": [],
+        "inactive_users": [],
+        "details": [
+          "📊 Found 6 local user accounts"
+        ]
+      },
+      {
+        "check_name": "Antivirus/EDR Status",
+        "risk_score": 0,
+        "av_installed": true,
+        "av_running": true,
+        "av_products": [
+          "Windows Defender"
+        ],
+        "details": [
+          "✅ AV/EDR running: Windows Defender"
+        ]
+      },
+      {
+        "check_name": "System Updates",
+        "risk_score": 3,
+        "last_update": "Unknown",
+        "update_status": "Service Not Running",
+        "details": [
+          "🖥️  System Boot Time: 10/29/2025, 9:21:13 AM",
+          "⚠️  Windows Update service is not running",
+          "📅 Last 4 updates installed"
+        ]
+      },
+      {
+        "check_name": "Startup Programs",
+        "risk_score": 6,
+        "startup_count": 365,
+        "suspicious_items": [
+          {
+            "name": "WsNativePushService.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Wondershare\\Wondershare NativePush\\WsNativePushService.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "WsToastNotification.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Wondershare\\Wondershare NativePush\\WsToastNotification.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "Grammarly.Desktop.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Grammarly\\DesktopIntegrations\\Grammarly.Desktop.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "UnInstDaemon.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\bwp0befc04a-3ffa-4345-ab70-a4cb5c4c5600\\UnInstDaemon.exe",
+            "reason": "Executable in temporary folder",
+            "risk_weight": 3,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.AdvancedPaste.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\WinUI3Apps\\PowerToys.AdvancedPaste.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.AlwaysOnTop.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.AlwaysOnTop.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.Awake.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.Awake.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.ColorPickerUI.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.ColorPickerUI.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.CropAndLock.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.CropAndLock.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.FancyZones.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.FancyZones.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.Peek.UI.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\WinUI3Apps\\PowerToys.Peek.UI.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "PowerToys.PowerLauncher.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\PowerToys\\PowerToys.PowerLauncher.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "copilot-language-server.exe",
+            "path": "C:\\Users\\ASUS\\AppData\\Roaming\\JetBrains\\PyCharmCE2025.2\\plugins\\github-copilot-intellij\\copilot-agent\\native\\win32-x64\\copilot-language-server.exe",
+            "reason": "Executable in AppData folder",
+            "risk_weight": 2,
+            "type": "Running Process"
+          },
+          {
+            "name": "BingWallpaperDaemon",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Temp\\bwp0befc04a-3ffa-4345-ab70-a4cb5c4c5600\\UnInstDaemon.exe",
+            "reason": "Executable in temporary folder (Startup)",
+            "risk_weight": 3,
+            "type": "Startup Entry"
+          },
+          {
+            "name": "Grammarly",
+            "path": "C:\\Users\\ASUS\\AppData\\Local\\Grammarly\\DesktopIntegrations\\Grammarly.Desktop.exe",
+            "reason": "Executable in AppData folder (Startup)",
+            "risk_weight": 2,
+            "type": "Startup Entry"
+          }
+        ],
+        "details": [
+          "🔄 365 running processes",
+          "📝 User Startup: 6 entries",
+          "📝 System Startup: 4 entries",
+          "⚠️  Very high number of running processes",
+          "✅ Normal number of startup entries",
+          "📈 Risk: 6/10 (Processes: 2, High-risk: 2, Medium-risk: 0)",
+          "🚨 Found 16 potentially suspicious items:",
+          "   🟡 WsNativePushService.exe - Executable in AppData folder",
+          "   🟡 WsToastNotification.exe - Executable in AppData folder",
+          "   🟡 Grammarly.Desktop.exe - Executable in AppData folder",
+          "   🔴 UnInstDaemon.exe - Executable in temporary folder",
+          "   🟡 PowerToys.AdvancedPaste.exe - Executable in AppData folder",
+          "   🟡 PowerToys.exe - Executable in AppData folder",
+          "   ... and 10 more suspicious items",
+          "🔴 2 items running from temporary locations",
+          "🟡 14 items running from AppData folders"
+        ]
+      }
+    ],
+    "summary": {
+      "total_checks": 16,
+      "high_risk_checks": 0,
+      "medium_risk_checks": 9,
+      "low_risk_checks": 7
+    }
+  }
+}

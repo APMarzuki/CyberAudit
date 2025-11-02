@@ -4,8 +4,15 @@ Main GUI window for CyberAudit
 import tkinter as tk
 import threading
 import customtkinter as ctk
+import sys
+import os
+
+# Add the parent directory to Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from src.core.system_scanner import SystemScanner
 from src.core.report_generator import ReportGenerator
+
 
 class CyberAuditGUI:
     def __init__(self):
@@ -16,7 +23,7 @@ class CyberAuditGUI:
         self.create_widgets()
 
     def setup_window(self):
-        self.root.title("CyberAudit v1.5.0 - Security Health Checker")
+        self.root.title("CyberAudit v2.0.0 - Security Health Checker")
         self.root.geometry("1000x700")
         self.root.minsize(900, 600)
 

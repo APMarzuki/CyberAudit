@@ -3,7 +3,12 @@ from src.audit_modules import browser_security
 from src.audit_modules import password_policy
 from src.audit_modules import logging_audit
 from src.audit_modules import encryption_check
-from src.audit_modules import usb_audit  # ADD THIS LINE
+from src.audit_modules import usb_audit
+from src.audit_modules import application_security
+from src.audit_modules import windows_services  # NEW
+from src.audit_modules import group_policy  # NEW
+from src.audit_modules import network_discovery  # NEW
+from src.audit_modules import windows_hardening  # NEW
 
 class SystemScanner:
     def __init__(self):
@@ -14,13 +19,17 @@ class SystemScanner:
             ("Password Policy", password_policy.check_password_policy),
             ("Logging & Monitoring", logging_audit.check_logging_audit),
             ("Encryption Status", encryption_check.check_encryption_status),
-            ("USB Device Control", usb_audit.check_usb_control),  # NEW
+            ("USB Device Control", usb_audit.check_usb_control),
+            ("Application Security", application_security.check_application_security),
+            ("Windows Services", windows_services.check_windows_services),  # NEW
+            ("Group Policy Compliance", group_policy.check_group_policy_compliance),  # NEW
+            ("Network Device Discovery", network_discovery.check_network_discovery),  # NEW
+            ("Windows Hardening", windows_hardening.check_windows_hardening),  # NEW
             ("Users & Groups", user_audit.audit_users_and_groups),
             ("Antivirus", av_edr_check.check_av_edr_status),
             ("Updates", update_check.check_system_updates),
             ("Startup", startup_analysis.analyze_startup_items)
         ]
-    # ... rest of the class remains the same
         self.progress_callback = None
 
     def set_progress_callback(self, callback):
